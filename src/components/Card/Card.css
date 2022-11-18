@@ -1,0 +1,17 @@
+.Card__section {
+  display: grid;
+  border-bottom: 1px solid var(--color-water-10);
+  width: 90%;
+  margin: 20px auto;
+  gap: 10px;
+  position: relative;
+}
+
+span {
+  text-align: center;
+}
+
+img {
+  position: absolute;
+  left: 90%;
+}

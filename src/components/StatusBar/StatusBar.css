@@ -1,0 +1,5 @@
+.StatusBar__section {
+  display: inline-flex;
+  gap: 10px;
+  margin: 10px;
+}
