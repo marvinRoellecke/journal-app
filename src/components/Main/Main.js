@@ -1,16 +1,12 @@
 import "./Main.css";
 import Form from "../Form/Form";
-import StatusBar from "../StatusBar/StatusBar";
-import Card from "../Card/Card";
+import Entries from "../Entries/Entries";
 
 export default function Main() {
   return (
     <main>
       <Form />
-      <StatusBar />
-      <Card />
-      <Card />
-      <Card />
+      <Entries />
     </main>
   );
 }

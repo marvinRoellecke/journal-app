@@ -1,5 +1,24 @@
 .StatusBar__section {
   display: inline-flex;
-  gap: 10px;
-  margin: 10px;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.StatusBar__div {
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+.StatusBar__allEntries {
+  background-color: var(--color-nemo);
+  color: var(--color-foam);
+  padding: 0px 9px;
+  border-radius: 999px;
+}
+
+.StatusBar__favourites {
+  background-color: var(--color-water-10);
+  padding: 0px 9px;
+  border-radius: 999px;
 }
