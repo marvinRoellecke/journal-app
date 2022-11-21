@@ -13,7 +13,9 @@ export default function Form() {
         <Input id="notes" rows="4">
           Notes
         </Input>
-        <button type="submit">Create</button>
+        <button type="submit" className="button__create">
+          Create
+        </button>
       </fieldset>
     </form>
   );

@@ -24,7 +24,13 @@ h2 {
   line-height: 1.5rem;
 }
 
-img {
+.button__favourite {
+  background: none;
+  border: none;
+}
+
+Star,
+StarFilled {
   height: 1.5rem;
   width: 1.5rem;
 }

@@ -19,7 +19,7 @@ fieldset {
   gap: 2rem;
 }
 
-button {
+.button__create {
   background-color: var(--color-nemo);
   color: var(--color-foam);
   padding: 1rem 2rem;
@@ -30,11 +30,11 @@ button {
   font-weight: 700;
 }
 
-button:hover {
+.button__create:hover {
   background-color: var(--color-nemo-dark);
   cursor: pointer;
 }
 
-button:active {
+.button__create:active {
   background-color: var(--color-nemo-mid);
 }
