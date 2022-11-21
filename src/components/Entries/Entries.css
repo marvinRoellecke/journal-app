@@ -9,3 +9,7 @@
 .Entries__divider {
   border: 1px solid #e4e8f0;
 }
+
+.Entries__divider:last-of-type {
+  display: none;
+}
