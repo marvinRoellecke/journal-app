@@ -2,40 +2,39 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 24px;
+}
+
+.Form__title {
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
 }
 
 fieldset {
   display: flex;
   flex-direction: column;
   border: none;
-  gap: 10px;
-  width: 90%;
+  width: 100%;
+  gap: 2rem;
 }
 
-textarea {
-  border: 1px solid var(--color-water-10);
-}
-
-.Form__p {
-  margin: 10px;
-}
-
-button {
+.button__create {
   background-color: var(--color-nemo);
   color: var(--color-foam);
-  font-size: 1.1rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
   border: none;
-  border-radius: 5px;
-  width: 150px;
+  border-radius: 4px;
+  align-self: center;
+  margin: 10px;
+  font-weight: 700;
 }
 
-button:hover {
+.button__create:hover {
   background-color: var(--color-nemo-dark);
   cursor: pointer;
 }
 
-button:active {
+.button__create:active {
   background-color: var(--color-nemo-mid);
 }

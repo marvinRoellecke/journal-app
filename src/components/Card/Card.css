@@ -1,17 +1,41 @@
 .Card__section {
-  display: grid;
-  border-bottom: 1px solid var(--color-water-10);
-  width: 90%;
-  margin: 20px auto;
-  gap: 10px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-span {
+.Card__date {
   text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  text-transform: uppercase;
 }
 
-img {
-  position: absolute;
-  left: 90%;
+.Card__title {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+.button__favourite {
+  background: none;
+  border: none;
+}
+
+Star,
+StarFilled {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.Card__article {
+  line-height: 1.5rem;
+  padding-right: 1.5rem;
 }
