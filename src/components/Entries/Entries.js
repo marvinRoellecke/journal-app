@@ -38,10 +38,14 @@ export default function Entries() {
     <section>
       <StatusBar />
       <div className="Entries__container">
-        {entries.map((entry) => (
+        {entries.map((entry, index) => (
           <Fragment key={entry.id}>
             <Card date={entry.date} motto={entry.motto} notes={entry.notes} />
-            <div className="Entries__divider"></div>
+            {index === entries.length - 1 ? (
+              ""
+            ) : (
+              <div className="Entries__divider"></div>
+            )}
           </Fragment>
         ))}
       </div>
