@@ -3,7 +3,7 @@ import { ReactComponent as StarFilled } from "./star-filled.svg";
 import { ReactComponent as Star } from "./star.svg";
 import { useState } from "react";
 
-export default function Card() {
+export default function Card({ date, motto, notes }) {
   const [isFavourite, setIsFavourite] = useState(false);
 
   function handleClick() {
@@ -12,18 +12,14 @@ export default function Card() {
 
   return (
     <section className="Card__section">
-      <span className="Card__date">FEB 28, 2028</span>
+      <span className="Card__date">{date}</span>
       <div className="Card__title">
-        <h2>"That's life in the city"</h2>
+        <h2>"{motto}"</h2>
         <button onClick={handleClick} className="button__favourite">
           {isFavourite ? <StarFilled /> : <Star />}
         </button>
       </div>
-      <article className="Card__article">
-        Si sine causa? quae fuerit causa, mox videro; interea hoc tenebo, si
-        mihi.<br></br>Et quidem se repellere, idque instituit docere sic omne
-        animal, simul atque.
-      </article>
+      <article className="Card__article">{notes}</article>
     </section>
   );
 }
