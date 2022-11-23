@@ -7,8 +7,8 @@ export default function Form({ onCreateEntries }) {
     const form = event.target.elements;
     const motto = form.motto.value;
     const notes = form.notes.value;
+
     const newEntry = {
-      date: "23 NOV, 2022",
       motto: motto,
       notes: notes,
     };
