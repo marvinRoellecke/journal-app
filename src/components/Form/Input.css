@@ -6,11 +6,11 @@
   width: 100%;
 }
 
-textarea {
+.Input {
   border: 1px solid var(--color-water-10);
   padding: 1rem;
   font-size: 1rem;
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   font-weight: 400;
   line-height: 1.5rem;
 }

@@ -1,9 +1,24 @@
 import "./Form.css";
 import Input from "./Input";
 
-export default function Form() {
+export default function Form({ onCreateEntries }) {
+  function handleSubmit(event) {
+    event.preventDefault();
+    const form = event.target.elements;
+    const motto = form.motto.value;
+    const notes = form.notes.value;
+    const newEntry = {
+      date: "23 NOV, 2022",
+      motto: motto,
+      notes: notes,
+    };
+    onCreateEntries(newEntry);
+    event.target.reset();
+    form.motto.focus();
+  }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <p className="Form__title">New Entry - Today, FEB 28, 2028</p>
 
       <fieldset>
