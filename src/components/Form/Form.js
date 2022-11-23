@@ -7,7 +7,12 @@ export default function Form({ onCreateEntries }) {
     const form = event.target.elements;
     const motto = form.motto.value;
     const notes = form.notes.value;
-    onCreateEntries(motto, notes);
+    const newEntry = {
+      date: "23 NOV, 2022",
+      motto: motto,
+      notes: notes,
+    };
+    onCreateEntries(newEntry);
     event.target.reset();
     form.motto.focus();
   }
