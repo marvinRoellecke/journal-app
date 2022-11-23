@@ -4,7 +4,7 @@ import StatusBar from "../StatusBar/StatusBar";
 import { Fragment } from "react";
 //import useLocalStorageState from "use-local-storage-state";
 
-export default function Entries({ entries, onToggleFavourite }) {
+export default function Entries({ entries, onToggleFavorite }) {
   return (
     <section>
       <StatusBar />
@@ -12,8 +12,8 @@ export default function Entries({ entries, onToggleFavourite }) {
         {entries.map((entry, index) => (
           <Fragment key={entry.id}>
             <Card
-              onToggleFavourite={onToggleFavourite}
-              isFavourite={entry.isFavourite}
+              onToggleFavorite={onToggleFavorite}
+              isFavorite={entry.isFavorite}
               id={entry.id}
               date={entry.date}
               motto={entry.motto}

@@ -6,26 +6,20 @@ export default function Card({
   date,
   motto,
   notes,
-  onToggleFavourite,
-  isFavourite,
+  onToggleFavorite,
+  isFavorite,
   id,
 }) {
-  //const [isFavourite, setIsFavourite] = useState(false);
-
-  //function handleClick() {
-  //setIsFavourite(!isFavourite);
-  //
-
   return (
     <section className="Card__section">
       <span className="Card__date">{date}</span>
       <div className="Card__title">
         <h2>"{motto}"</h2>
         <button
-          onClick={() => onToggleFavourite(id)}
-          className="button__favourite"
+          onClick={() => onToggleFavorite(id)}
+          className="button__favorite"
         >
-          {isFavourite ? <StarFilled /> : <Star />}
+          {isFavorite ? <StarFilled /> : <Star />}
         </button>
       </div>
       <article className="Card__article">{notes}</article>
