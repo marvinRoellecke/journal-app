@@ -38,8 +38,8 @@ export default function Main() {
 
   function handleCreateEntries(motto, notes) {
     const newEntry = {
-      id: 1001,
-      date: "Feb 2, 2025",
+      id: motto,
+      date: "NOV 23, 2022",
       motto: motto,
       notes: notes,
     };
