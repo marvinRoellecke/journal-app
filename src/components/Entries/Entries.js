@@ -2,12 +2,25 @@ import "./Entries.css";
 import Card from "../Card/Card";
 import StatusBar from "../StatusBar/StatusBar";
 import { Fragment } from "react";
-//import useLocalStorageState from "use-local-storage-state";
 
-export default function Entries({ entries, onToggleFavorite }) {
+export default function Entries({
+  entries,
+  allEntriesCount,
+  favoriteEntriesCount,
+  onToggleFavorite,
+  onShowFavoriteEntries,
+  onShowAllEntries,
+  filter,
+}) {
   return (
     <section>
-      <StatusBar />
+      <StatusBar
+        onShowAllEntries={onShowAllEntries}
+        onShowFavoriteEntries={onShowFavoriteEntries}
+        filter={filter}
+        allEntriesCount={allEntriesCount}
+        favoriteEntriesCount={favoriteEntriesCount}
+      />
       <div className="Entries__container">
         {entries.map((entry, index) => (
           <Fragment key={entry.id}>

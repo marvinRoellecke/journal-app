@@ -1,16 +1,42 @@
 import "./StatusBar.css";
 
-export default function StatusBar() {
+export default function StatusBar({
+  onShowAllEntries,
+  onShowFavoriteEntries,
+  filter,
+  allEntriesCount,
+  favoriteEntriesCount,
+}) {
   return (
     <section className="StatusBar__section">
-      <div className="StatusBar__div">
-        <span>All Entries</span>
-        <span className="StatusBar__allEntries">3</span>
-      </div>
-      <div className="StatusBar__div">
-        <span>Favourites</span>
-        <span className="StatusBar__favourites">1</span>
-      </div>
+      <button
+        type="button"
+        className="StatusBar__div"
+        onClick={onShowAllEntries}
+      >
+        All Entries
+        <span
+          className={`StatusBar__count ${
+            filter === "all" && "StatusBar__count--active"
+          }`}
+        >
+          {allEntriesCount}
+        </span>
+      </button>
+      <button
+        type="button"
+        className="StatusBar__div"
+        onClick={onShowFavoriteEntries}
+      >
+        Favourites
+        <span
+          className={`StatusBar__count ${
+            filter === "favorite" && "StatusBar__count--active"
+          }`}
+        >
+          {favoriteEntriesCount}
+        </span>
+      </button>
     </section>
   );
 }
