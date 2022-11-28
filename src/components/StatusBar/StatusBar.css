@@ -8,17 +8,28 @@
 .StatusBar__div {
   display: inline-flex;
   gap: 0.5rem;
-}
-
-.StatusBar__allEntries {
-  background-color: var(--color-nemo);
-  color: var(--color-foam);
-  padding: 0px 9px;
+  background: none;
+  border: none;
+  padding: 10px 1rem;
+  font-size: 1rem;
   border-radius: 999px;
 }
 
-.StatusBar__favourites {
+.StatusBar__div:hover {
+  background-color: var(--color-water-10);
+}
+
+.StatusBar__div:active {
+  background-color: var(--color-water-10);
+}
+
+.StatusBar__count {
   background-color: var(--color-water-10);
   padding: 0px 9px;
   border-radius: 999px;
+}
+
+.StatusBar__count--active {
+  background-color: var(--color-nemo);
+  color: var(--color-foam);
 }

@@ -1,6 +1,7 @@
 import "./Main.css";
 import Form from "../Form/Form";
 import Entries from "../Entries/Entries";
+import { useState } from "react";
 import useLocalStorageState from "use-local-storage-state";
 import { nanoid } from "nanoid";
 
@@ -42,6 +43,16 @@ export default function Main() {
   const [entries, setEntries] = useLocalStorageState("entries", {
     defaultValue: initialEntries,
   });
+  const [filter, setFilter] = useState("all");
+  const favoriteEntries = entries.filter((entry) => entry.isFavorite);
+
+  function handleShowFavoriteEntries() {
+    setFilter("favorite");
+  }
+
+  function handleShowAllEntries() {
+    setFilter("all");
+  }
 
   function handleToggleFavorite(id) {
     setEntries(
@@ -64,7 +75,15 @@ export default function Main() {
   return (
     <main>
       <Form onCreateEntries={handleCreateEntries} />
-      <Entries onToggleFavorite={handleToggleFavorite} entries={entries} />
+      <Entries
+        entries={filter === "all" ? entries : favoriteEntries}
+        allEntriesCount={entries.length}
+        favoriteEntriesCount={favoriteEntries.length}
+        onToggleFavorite={handleToggleFavorite}
+        onShowFavoriteEntries={handleShowFavoriteEntries}
+        onShowAllEntries={handleShowAllEntries}
+        filter={filter}
+      />
     </main>
   );
 }
